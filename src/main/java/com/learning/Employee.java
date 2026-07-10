@@ -30,7 +30,8 @@ public class Employee {
     @Transient
     protected Integer age;
 
-    @OneToOne(mappedBy = "employee")
+    @OneToOne
+    @JoinColumn(name = "access_card_id")
     private AccessCard accessCard;
 
     @Override

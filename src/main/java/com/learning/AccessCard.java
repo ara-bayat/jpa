@@ -23,8 +23,7 @@ public class AccessCard {
 
     private boolean active;
 
-    @OneToOne
-    @JoinColumn(name = "employee_id")
+    @OneToOne(mappedBy = "accessCard")
     private Employee employee;
 
     @Override

@@ -25,8 +25,8 @@ public class Main {
         EntityManager em = factory.createEntityManager();
         var transaction = em.getTransaction();
         transaction.begin();
-        em.persist(employee);
         em.persist(accessCard);
+        em.persist(employee);
         transaction.commit();
         em.close();
         factory.close();
