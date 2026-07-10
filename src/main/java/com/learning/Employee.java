@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,7 +14,7 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "EMPLOYEE_DATA")
+@Table
 public class Employee {
     @Id
     @GeneratedValue
@@ -33,6 +34,9 @@ public class Employee {
     @OneToOne
     @JoinColumn(name = "access_card_id")
     private AccessCard accessCard;
+
+    @OneToMany(mappedBy = "employee")
+    private List<Payment> payments;
 
     @Override
     public String toString() {

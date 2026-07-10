@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import java.time.LocalDate;
 
-public class OneToOne {
+public class OneToOneExample {
     public static void main(String[] args) {
         Employee employee = Employee.builder()
                 .name("alireza")
