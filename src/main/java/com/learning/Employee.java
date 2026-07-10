@@ -38,6 +38,9 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     private List<Payment> payments;
 
+    @ManyToMany(mappedBy = "employees")
+    private List<EmailGroup> emailGroups;
+
     @Override
     public String toString() {
         return "id: " + id + ", name: " + name + ", role: " + role + ", birthDate: " + birthDate;
